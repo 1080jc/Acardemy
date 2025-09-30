@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="autor" content="">
     <title>Document</title>
-    <link rel="favicon" th:href="@{/favicon/faviconWhite.jpg}" type="icon/jpg" sizes="334x267">
-    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link rel="favicon" href="@{/favicon/faviconWhite.jpg}" type="icon/jpg" sizes="334x267">
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
     <!--Pagina-->
     <div class="pagina">
         <!--Barra de navegacion-->
         <header class="nav">
             <div class="logo">
-                <a class="enlace" href="/index">
-                    <img class="icono" th:src="@{/favicon/faviconWhite.jpg}" alt="logo Acardemy">
+                <a class="enlace" href="index.html">
+                    <ion-icon class="icono" name="school-sharp"></ion-icon>
                     <span class="titulo">Acardemy</span>
                 </a>
             </div>
@@ -24,10 +26,12 @@
                 <ul class="rutas">
                     <a class="enlace" href="/index">
                         <li class="inicio">Inicio</li>
-                    </a>    
+                    </a>
+                    <div class="espacio"></div>
                     <a class="enlace" href="/informacion">
                         <li class="informacion">Informacion</li>
                     </a>
+                    <div class="espacio"></div>
                     <a class="enlace" href="/loginUser">
                         <li class="login">Inicia Sesion</li>
                     </a>
@@ -36,7 +40,6 @@
         </header>
         <!--Cabecera-->
         <div class="cabecera">
-            <img class="fondo" th:src="@{/img/fondoLibros.jpg}">
             <h2 class="subtitulo">Organiza tus temas y estudialos donde quieras</h2>
             <p class="texto">una plataforma de aprendisaje por medio de flashcards para ayudarte a recordar esos temas que mas se te dificultan</p>
         </div>
@@ -45,34 +48,40 @@
             <section class="seccion">
                 <div class="introduccion">
                     <h1 class="pregunta">¿Que es Acardemy?</h1>
-                    <p class="respuesta">Es una herramienta para ayudar a aquellas personas que les cueste recordar o memorizarse palabras o conseptos de temas, materias o cualquier tipo de area en la que quiera estudias, ideal para estudiantes de cualquier tipo ya sea en algun instituto o de forma autodidacta.</p>
+                    <p class="respuesta">Es una herramienta para ayudar a aquellas personas que les cueste recordar o memorizarse palabras o conseptos de temas, materias o cualquier tipo de area en la que quiera estudias, ideal para estudiantes de cualquier tipo ya sea en
+                        algun instituto o de forma autodidacta.------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
                 </div>
                 <div class="foto">
                     <img class="imagen" th:src="@{/img/#}">
                 </div>
-                <button class="btn">Registrarse</button>
             </section>
+            <button class="btn">Registrarse</button>
         </div>
         <!--Pie de pagina-->
         <footer class="footer">
-            <p>--------</p>
-            <ul class="rutas">
-                    <a class="enlace" href="#">
-                        <li class="">--------------</li>
-                    </a>    
-                    <a class="enlace" href="#">
-                        <li class="">----------------</li>
-                    </a>
-                    <a class="enlace" href="#">
-                        <li class="">---------</li>
-                    </a>
-                </ul>
+            <p class="texto_footer">--------</p>
+            <ul class="rutas_footer">
+                <a class="enlace_footer" href="#">
+                    <li class="">--------------</li>
+                </a>
+                <br>
+                <a class="enlace_footer" href="#">
+                    <li class="">----------------</li>
+                </a>
+                <br>
+                <a class="enlace_footer" href="#">
+                    <li class="">---------</li>
+                </a>
+            </ul>
         </footer>
     </div>
 
     <!--Script-->
-    <script> </script>
+    <script>
+        src = "/js/index.js"
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

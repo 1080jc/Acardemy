@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Variables */
+
+:root {}
+
+
+/* Cuerpo de la pagina */
+
+body {
+    border: solid 2px red;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.pagina {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+/*Barra de navegacion */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid;
+    margin: 0;
+    padding: 15px;
+    height: 25px;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid;
+    width: auto;
+    height: 30px;
+}
+
+.enlace {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.icono {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.titulo {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.opciones {
+    border: solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    width: auto;
+}
+
+.rutas {
+    border: solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    height: 35px;
+    width: auto;
+}
+
+.inicio {
+    border: solid;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.informacion {
+    border: solid;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.registro {
+    border: solid;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.espacio {
+    border: solid;
+    width: 0, 5px;
+    height: 15px;
+}
+
+
+/* Contenido de la pagina */
+
+.contenido {
+    border: solid;
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+
+/* Formulario */
+
+.cuadro {
+    border: solid;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: auto;
+    margin: 80px;
+}
+
+.titulo_ingreso {
+    border: solid;
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.formulario {
+    border: solid;
+    display: grid;
+    justify-content: end;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.input {
+    border: solid;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icono_ingreso {
+    border: solid;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.ingreso {
+    border: solid;
+    margin: 20px;
+    height: 30px;
+    width: 230px;
+    border-bottom: solid 5px;
+    cursor: pointer;
+}
+
+.recuperar {
+    border: solid;
+    display: grid;
+    justify-content: end;
+    align-items: center;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 400;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.btn {
+    border: solid;
+    margin: 20px;
+    margin-bottom: 30px;
+    height: 50px;
+    width: 300px;
+    font-size: 30px;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+/* footer */
+
+.footer {
+    border: solid;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.texto_footer {
+    margin: 20px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.rutas_footer {
+    margin-right: 40px;
+    list-style: none;
+    width: auto;
+    height: auto;
+}
+
+.enlace_footer {
+    text-decoration: none;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+/* Animaciones de la pagina */

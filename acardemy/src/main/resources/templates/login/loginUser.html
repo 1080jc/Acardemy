@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="autor" content="">
-    <title>Acardemy</title>
+    <title>Acardemy - Ingreso</title>
     <link rel="favicon" href="@{/favicon/faviconWhite.jpg}" type="icon/jpg" sizes="334x267">
-    <link rel="stylesheet" href="indexAcardemy.css">
+    <link rel="stylesheet" href="loginUserAcardemy.css">
 </head>
 
 <body>
@@ -32,30 +32,32 @@
                         <li class="informacion">Informacion</li>
                     </a>
                     <div class="espacio"></div>
-                    <a class="enlace" href="/loginUser">
-                        <li class="login">Inicia Sesion</li>
+                    <a class="enlace" href="/registro">
+                        <li class="registro">Registrarse</li>
                     </a>
                 </ul>
             </div>
         </header>
-        <!--Cabecera-->
-        <div class="cabecera">
-            <h2 class="subtitulo">Organiza tus temas y estudialos donde quieras</h2>
-            <p class="texto">una plataforma de aprendisaje por medio de flashcards para ayudarte a recordar esos temas que mas se te dificultan</p>
-        </div>
-        <!--Contenido de pagina-->
+        <!--Contenido de la pagina-->
         <div class="contenido">
-            <section class="seccion">
-                <div class="introduccion">
-                    <h1 class="pregunta">¿Que es Acardemy?</h1>
-                    <p class="respuesta">Es una herramienta para ayudar a aquellas personas que les cueste recordar o memorizarse palabras o conseptos de temas, materias o cualquier tipo de area en la que quiera estudias, ideal para estudiantes de cualquier tipo ya sea en
-                        algun instituto o de forma autodidacta.------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
-                </div>
-                <div class="foto">
-                    <img class="imagen" th:src="@{/img/#}" alt="foto">
-                </div>
-            </section>
-            <button class="btn">Registrarse</button>
+            <!--Formulario de registro-->
+            <main class="cuadro">
+                <h1 class="titulo_ingreso">Ingreso de usuario</h1>
+                <form class="formulario" th:action="@{#}" th:object="${#}" method="post">
+                    <div class="input">
+                        <ion-icon class="icono_ingreso" name="mail-outline"></ion-icon>
+                        <input class="ingreso" type="text" th:field="*{email}" placeholder="Ingrese su correo" required>
+                        <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></div>
+                    </div>
+                    <div class="input">
+                        <ion-icon class="icono_ingreso" name="key-outline"></ion-icon>
+                        <input class="ingreso" type="text" th:field="*{password}" placeholder="Ingrese su contraseña" required>
+                        <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error"></div>
+                    </div>
+                </form>
+                <a class="recuperar" th:href="#">¿Olvido su contraseña?</a>
+                <button class="btn">Ingresar</button>
+            </main>
         </div>
         <!--Pie de pagina-->
         <footer class="footer">
@@ -77,8 +79,7 @@
     </div>
 
     <!--Script-->
-    <script>
-        src = "/js/index.js"
+    <script src="loginUserAcardemy.js">
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

@@ -7,8 +7,8 @@
     <meta name="description" content="">
     <meta name="autor" content="">
     <title>Acardemy</title>
-    <link rel="favicon" href="@{/favicon/faviconWhite.jpg}" type="icon/jpg" sizes="334x267">
-    <link rel="stylesheet" href="indexAcardemy.css">
+    <link rel="favicon" href="/acardemy/src/main/resources/static/favicon/faviconWhite.jpg" type="icon/jpg" sizes="334x267">
+    <link rel="stylesheet" href="/acardemy/src/main/resources/static/css/index.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
         <!--Barra de navegacion-->
         <header class="nav">
             <div class="logo">
-                <a class="enlace" href="indexAcardemy.html">
+                <a class="enlace" href="index.html">
                     <ion-icon class="icono" name="school-sharp"></ion-icon>
                     <span class="titulo">Acardemy</span>
                 </a>
@@ -32,7 +32,7 @@
                         <li class="informacion">Informacion</li>
                     </a>
                     <div class="espacio"></div>
-                    <a class="enlace" href="/loginUser">
+                    <a class="enlace" href="/login">
                         <li class="login">Inicia Sesion</li>
                     </a>
                 </ul>
@@ -52,7 +52,7 @@
                         algun instituto o de forma autodidacta.------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
                 </div>
                 <div class="foto">
-                    <img class="imagen" th:src="@{/img/#}" alt="foto">
+                    <img class="imagen" th:src="/acardemy/src/main/resources/static/img/#" alt="foto">
                 </div>
             </section>
             <button class="btn">Registrarse</button>

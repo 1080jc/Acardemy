@@ -7,8 +7,8 @@
     <meta name="description" content="">
     <meta name="autor" content="">
     <title>Acardemy - Ingreso</title>
-    <link rel="favicon" href="@{/favicon/faviconWhite.jpg}" type="icon/jpg" sizes="334x267">
-    <link rel="stylesheet" href="loginUserAcardemy.css">
+    <link rel="favicon" href="/acardemy/src/main/resources/static/favicon/faviconWhite.jpg" type="icon/jpg" sizes="334x267">
+    <link rel="stylesheet" href="/acardemy/src/main/resources/static/css/login/loginUser.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
         <!--Barra de navegacion-->
         <header class="nav">
             <div class="logo">
-                <a class="enlace" href="indexAcardemy.html">
+                <a class="enlace" href="index.html">
                     <ion-icon class="icono" name="school-sharp"></ion-icon>
                     <span class="titulo">Acardemy</span>
                 </a>
@@ -55,7 +55,7 @@
                         <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error"></div>
                     </div>
                 </form>
-                <a class="recuperar" th:href="#">¿Olvido su contraseña?</a>
+                <a class="recuperar" th:href="/acardemy/src/main/resources/templates/recuperar/recuperarUser.html">¿Olvido su contraseña?</a>
                 <button class="btn">Ingresar</button>
             </main>
         </div>

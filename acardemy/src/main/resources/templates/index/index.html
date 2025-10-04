@@ -8,7 +8,7 @@
     <meta name="autor" content="">
     <title>Acardemy</title>
     <link rel="favicon" th:href="@{static/favicon/faviconWhite.jpg}" type="icon/jpg" sizes="334x267">
-    <link rel="stylesheet" th:href="@{css/index.css}">
+    <link rel="stylesheet" th:href="@{css/index/index.css}">
 </head>
 
 <body>
@@ -32,7 +32,7 @@
                         <li class="informacion">Informacion</li>
                     </a>
                     <div class="espacio"></div>
-                    <a class="enlace" th:href="@{/loginUser}">
+                    <a class="enlace" th:href="@{/login}">
                         <li class="login">Inicia Sesion</li>
                     </a>
                 </ul>
@@ -54,7 +54,9 @@
                 <div class="foto">
                 </div>
             </section>
-            <button class="btn">Registrarse</button>
+            <a class="enlace" th:href="@{/register}">
+                <button class="btn">Registrarse</button>
+            </a>
         </div>
         <!--Pie de pagina-->
         <footer class="footer">

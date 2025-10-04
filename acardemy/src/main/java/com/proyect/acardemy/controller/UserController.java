@@ -17,40 +17,39 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
-@RequestMapping("/user")
 public class UserController {
 
     @Autowired
     private UserService userService;
 
-    @GetMapping("/registerUser")
+    @GetMapping("/register")
     public String mostrarFormularioRegistro(Model model) {
-        model.addAttribute("usuario", new User());
+        model.addAttribute("user", new User());
         return "register/registerUser";
     }
 
-    @PostMapping("/registerUser")
+    @PostMapping("/register")
     public String registrarPropietario(@Valid @ModelAttribute User user, Model model) {
         if (userService.existePorCorreo(user.getEmail())) {
             model.addAttribute("error", "el usuario ya esta registrado");
             return "register/registerUser";
         }
         userService.guardar(user);
-        return "redirect:/?index=exito";
+        return "redirect:/?index/index=exito";
     }
     
-    @GetMapping("/loginUser")
+    @GetMapping("/login")
     public String mostrarLogin(Model model) {
-        model.addAttribute("usuario", new User());
+        model.addAttribute("user", new User());
         return "login/loginUser";
     }
 
-    @PostMapping("/loginUser")
-    public String LoginPropietario(@ModelAttribute User user, Model model) {
+    @PostMapping("/login")
+    public String LoginUser(@ModelAttribute User user, Model model) {
         User encontrado = userService.buscarPorCorreoYContraseña(user.getEmail(), user.getPassword());
 
         if (encontrado != null) {
-            model.addAttribute("usuario", encontrado);
+            model.addAttribute("user", encontrado);
             return "redirect:/panel/panelPrincipal?correo=" + encontrado.getEmail();
         } else {
             model.addAttribute("error", "correo o contraseña incorrectos");

@@ -32,7 +32,7 @@
                         <li class="informacion">Informacion</li>
                     </a>
                     <div class="espacio"></div>
-                    <a class="enlace" th:href="@{/registerUser}">
+                    <a class="enlace" th:href="@{/register}">
                         <li class="registro">Registrarse</li>
                     </a>
                 </ul>
@@ -43,20 +43,20 @@
             <!--Formulario de registro-->
             <main class="cuadro">
                 <h1 class="titulo_ingreso">Ingreso de usuario</h1>
-                <form class="formulario" th:action="@{/loginUser}" th:object="${user}" method="post">
+                <form class="formulario" th:action="@{/login}" th:object="${user}" method="post">
                     <div class="input">
                         <ion-icon class="icono_ingreso" name="mail-outline"></ion-icon>
-                        <input class="ingreso" type="text" th:field="*{email}" placeholder="Ingrese su correo" required>
+                        <input class="ingreso" type="email" th:field="*{email}" placeholder="Ingrese su correo" required>
                         <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></div>
                     </div>
                     <div class="input">
                         <ion-icon class="icono_ingreso" name="key-outline"></ion-icon>
-                        <input class="ingreso" type="text" th:field="*{password}" placeholder="Ingrese su contraseña" required>
+                        <input class="ingreso" type="password" th:field="*{password}" placeholder="Ingrese su contraseña" required>
                         <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error"></div>
                     </div>
+                    <a class="recuperar" th:href="@{/recuperar}">¿Olvido su contraseña?</a>
+                    <button class="btn" type="submit">Ingresar</button>
                 </form>
-                <a class="recuperar" th:href="@{/recuperarUser}">¿Olvido su contraseña?</a>
-                <button class="btn">Ingresar</button>
             </main>
         </div>
         <!--Pie de pagina-->

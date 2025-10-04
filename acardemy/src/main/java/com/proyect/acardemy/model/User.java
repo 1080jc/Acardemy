@@ -40,7 +40,7 @@ public class User {
     @NotBlank(message = "La contraseña no puede estar vacio")
     private String password;
 
-    @Column(name = "fecha de registro", nullable = false)
+    @Column(name = "fecha de registro")
     private LocalDateTime fechaRegistro;
 
 
@@ -59,14 +59,6 @@ public class User {
 
 
     //Getters & Setters
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public @NotBlank(message = "El nombre no puede estar vacio") String getNombre() {
         return nombre;
     }

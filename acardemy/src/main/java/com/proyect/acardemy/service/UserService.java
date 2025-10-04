@@ -6,6 +6,9 @@ import org.springframework.stereotype.Service;
 import com.proyect.acardemy.model.User;
 import com.proyect.acardemy.repository.UserRepository;
 
+import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
+
 @Service
 public class UserService {
     
@@ -27,4 +30,6 @@ public class UserService {
     public User obtenerPorCorreo(String email) {
         return userRepository.findByEmail(email).orElse(null);
     }
+
+
 }

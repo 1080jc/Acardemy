@@ -23,15 +23,15 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/register")
+    @GetMapping("/registerUser")
     public String mostrarFormularioRegistro(Model model) {
         model.addAttribute("usuario", new User());
         return "register/registerUser";
     }
 
-    @PostMapping("/register")
+    @PostMapping("/registerUser")
     public String registrarPropietario(@Valid @ModelAttribute User user, Model model) {
-        if (userService.existePorId(user.getId())) {
+        if (userService.existePorCorreo(user.getEmail())) {
             model.addAttribute("error", "el usuario ya esta registrado");
             return "register/registerUser";
         }
@@ -39,13 +39,13 @@ public class UserController {
         return "redirect:/?index=exito";
     }
     
-    @GetMapping("/login")
+    @GetMapping("/loginUser")
     public String mostrarLogin(Model model) {
         model.addAttribute("usuario", new User());
         return "login/loginUser";
     }
 
-    @PostMapping("/login")
+    @PostMapping("/loginUser")
     public String LoginPropietario(@ModelAttribute User user, Model model) {
         User encontrado = userService.buscarPorCorreoYContraseña(user.getEmail(), user.getPassword());
 

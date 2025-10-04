@@ -7,8 +7,8 @@
     <meta name="description" content="">
     <meta name="autor" content="">
     <title>Acardemy - Ingreso</title>
-    <link rel="favicon" href="/acardemy/src/main/resources/static/favicon/faviconWhite.jpg" type="icon/jpg" sizes="334x267">
-    <link rel="stylesheet" href="/acardemy/src/main/resources/static/css/login/loginUser.css">
+    <link rel="favicon" th:href="@{static/favicon/faviconWhite.jpg}" type="icon/jpg" sizes="334x267">
+    <link rel="stylesheet" th:href="@{css/login/loginUser.css}">
 </head>
 
 <body>
@@ -17,22 +17,22 @@
         <!--Barra de navegacion-->
         <header class="nav">
             <div class="logo">
-                <a class="enlace" href="index.html">
+                <a class="enlace" th:href="@{/index}">
                     <ion-icon class="icono" name="school-sharp"></ion-icon>
                     <span class="titulo">Acardemy</span>
                 </a>
             </div>
             <div class="opciones">
                 <ul class="rutas">
-                    <a class="enlace" href="/index">
+                    <a class="enlace" th:href="@{/index}">
                         <li class="inicio">Inicio</li>
                     </a>
                     <div class="espacio"></div>
-                    <a class="enlace" href="/informacion">
+                    <a class="enlace" th:href="@{/informacion}">
                         <li class="informacion">Informacion</li>
                     </a>
                     <div class="espacio"></div>
-                    <a class="enlace" href="/registro">
+                    <a class="enlace" th:href="@{/registerUser}">
                         <li class="registro">Registrarse</li>
                     </a>
                 </ul>
@@ -43,7 +43,7 @@
             <!--Formulario de registro-->
             <main class="cuadro">
                 <h1 class="titulo_ingreso">Ingreso de usuario</h1>
-                <form class="formulario" th:action="@{#}" th:object="${#}" method="post">
+                <form class="formulario" th:action="@{/loginUser}" th:object="${user}" method="post">
                     <div class="input">
                         <ion-icon class="icono_ingreso" name="mail-outline"></ion-icon>
                         <input class="ingreso" type="text" th:field="*{email}" placeholder="Ingrese su correo" required>
@@ -55,7 +55,7 @@
                         <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error"></div>
                     </div>
                 </form>
-                <a class="recuperar" th:href="/acardemy/src/main/resources/templates/recuperar/recuperarUser.html">¿Olvido su contraseña?</a>
+                <a class="recuperar" th:href="@{/recuperarUser}">¿Olvido su contraseña?</a>
                 <button class="btn">Ingresar</button>
             </main>
         </div>
@@ -63,15 +63,15 @@
         <footer class="footer">
             <p class="texto_footer">--------</p>
             <ul class="rutas_footer">
-                <a class="enlace_footer" href="#">
+                <a class="enlace_footer" th:href="@{#}">
                     <li class="">--------------</li>
                 </a>
                 <br>
-                <a class="enlace_footer" href="#">
+                <a class="enlace_footer" th:href="@{#}">
                     <li class="">----------------</li>
                 </a>
                 <br>
-                <a class="enlace_footer" href="#">
+                <a class="enlace_footer" th:href="@{#}">
                     <li class="">---------</li>
                 </a>
             </ul>
@@ -79,7 +79,7 @@
     </div>
 
     <!--Script-->
-    <script src="loginUserAcardemy.js">
+    <script src="js/loginUser.js">
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

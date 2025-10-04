@@ -7,8 +7,8 @@
     <meta name="description" content="">
     <meta name="autor" content="">
     <title>Acardemy - Registro</title>
-    <link rel="favicon" href="/acardemy/src/main/resources/static/favicon/faviconWhite.jpg" type="icon/jpg" sizes="334x267">
-    <link rel="stylesheet" href="/acardemy/src/main/resources/static/css/register/registerUser.css">
+    <link rel="favicon" th:href="@{static/favicon/faviconWhite.jpg}" type="icon/jpg" sizes="334x267">
+    <link rel="stylesheet" th:href="@{css/register/registerUser.css}">
 </head>
 
 <body>
@@ -17,22 +17,22 @@
         <!--Barra de navegacion-->
         <header class="nav">
             <div class="logo">
-                <a class="enlace" href="index.html">
+                <a class="enlace" th:href="@{/index}">
                     <ion-icon class="icono" name="school-sharp"></ion-icon>
                     <span class="titulo">Acardemy</span>
                 </a>
             </div>
             <div class="opciones">
                 <ul class="rutas">
-                    <a class="enlace" href="/index">
+                    <a class="enlace" th:href="@{/index}">
                         <li class="inicio">Inicio</li>
                     </a>
                     <div class="espacio"></div>
-                    <a class="enlace" href="/informacion">
+                    <a class="enlace" th:href="@{/informacion}">
                         <li class="informacion">Informacion</li>
                     </a>
                     <div class="espacio"></div>
-                    <a class="enlace" href="/login">
+                    <a class="enlace" th:href="@{/loginUser}">
                         <li class="login">Inicia Sesion</li>
                     </a>
                 </ul>
@@ -43,7 +43,7 @@
             <!--Formulario de registro-->
             <main class="cuadro">
                 <h1 class="titulo_registro">Registro de usuario</h1>
-                <form class="formulario" th:action="@{#}" th:object="${#}" method="post">
+                <form class="formulario" th:action="@{/registerUser}" th:object="${user}" method="post">
                     <div class="input">
                         <ion-icon class="icono_registro" name="person-circle-outline"></ion-icon>
                         <input class="ingreso" type="text" th:field="*{nombre}" placeholder="Ingrese su nombre" required>
@@ -72,15 +72,15 @@
         <footer class="footer">
             <p class="texto_footer">--------</p>
             <ul class="rutas_footer">
-                <a class="enlace_footer" href="#">
+                <a class="enlace_footer" th:href="@{#}">
                     <li class="">--------------</li>
                 </a>
                 <br>
-                <a class="enlace_footer" href="#">
+                <a class="enlace_footer" th:href="@{#}">
                     <li class="">----------------</li>
                 </a>
                 <br>
-                <a class="enlace_footer" href="#">
+                <a class="enlace_footer" th:href="@{#}">
                     <li class="">---------</li>
                 </a>
             </ul>
@@ -88,7 +88,7 @@
     </div>
 
     <!--Script-->
-    <script src="registroUserAcardemy.js">
+    <script src="js/registerUser.js">
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

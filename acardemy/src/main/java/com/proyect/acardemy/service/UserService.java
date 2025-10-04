@@ -12,8 +12,8 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public boolean existePorId(Long id) {
-        return userRepository.existsById(id);
+    public boolean existePorCorreo(String email) {
+        return userRepository.findByEmail(email).isPresent();
     }
 
     public void guardar(User user) {
@@ -24,7 +24,7 @@ public class UserService {
         return userRepository.findByEmailAndPassword(email, password);
     }
 
-    public User obtenerPorId(Long id) {
-        return userRepository.findById(id).orElse(null);
+    public User obtenerPorCorreo(String email) {
+        return userRepository.findByEmail(email).orElse(null);
     }
 }

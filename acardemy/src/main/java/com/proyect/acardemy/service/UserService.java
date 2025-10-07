@@ -6,8 +6,7 @@ import org.springframework.stereotype.Service;
 import com.proyect.acardemy.model.User;
 import com.proyect.acardemy.repository.UserRepository;
 
-import java.time.LocalDateTime;
-import java.time.ZonedDateTime;
+import java.time.LocalDate;
 
 @Service
 public class UserService {
@@ -20,7 +19,11 @@ public class UserService {
     }
 
     public void guardar(User user) {
+        if (user.getFechaRegistro() == null){
+            user.setFechaRegistro(LocalDate.now());
+        }
         userRepository.save(user);
+
     }
 
     public User buscarPorCorreoYContraseña(String email, String password) {
@@ -30,6 +33,5 @@ public class UserService {
     public User obtenerPorCorreo(String email) {
         return userRepository.findByEmail(email).orElse(null);
     }
-
 
 }

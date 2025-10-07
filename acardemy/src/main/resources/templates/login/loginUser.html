@@ -47,12 +47,10 @@
                     <div class="input">
                         <ion-icon class="icono_ingreso" name="mail-outline"></ion-icon>
                         <input class="ingreso" type="email" th:field="*{email}" placeholder="Ingrese su correo" required>
-                        <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></div>
                     </div>
                     <div class="input">
                         <ion-icon class="icono_ingreso" name="key-outline"></ion-icon>
                         <input class="ingreso" type="password" th:field="*{password}" placeholder="Ingrese su contraseña" required>
-                        <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error"></div>
                     </div>
                     <a class="recuperar" th:href="@{/recuperar}">¿Olvido su contraseña?</a>
                     <button class="btn" type="submit">Ingresar</button>

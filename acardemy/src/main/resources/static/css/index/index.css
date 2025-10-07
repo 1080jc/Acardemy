@@ -2,13 +2,24 @@
 
 /* Variables */
 
-:root {}
+:root {
+    --color-navBar:  #5952D4;
+    --color-backgraund-uno:  #CBC8E3;
+    --color-backgraund-dos:  #D9D7E8;
+    --color-backgraund-tres:  #FAFAFA;
+    --color-text-uno:  #000000;
+    --color-text-dos:  #FFFFFF;
+    --color-btn:  #6FAEF6;
+    --color-footer:  #1D4273;
+    --color-text-hover:  #BAC8FF;
+    --color-shadow:  #1F1F1F;
+}
 
 
 /* Cuerpo de la pagina */
 
 body {
-    border: solid 2px red;
+    background-color: var(--color-backgraund-uno);
     font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
@@ -25,10 +36,10 @@ body {
 /*Barra de navegacion */
 
 .nav {
+    background-color: var(--color-navBar);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: solid;
     margin: 0;
     padding: 15px;
     height: 25px;
@@ -38,41 +49,41 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: solid;
     width: auto;
     height: 30px;
+    margin-left: 30px;
 }
 
 .enlace {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: solid;
     text-decoration: none;
     cursor: pointer;
 }
 
 .icono {
+    color: var(--color-text-uno);
     font-size: 30px;
     margin-right: 10px;
 }
 
 .titulo {
+    color: var(--color-text-uno);
     font-size: 25px;
     font-weight: 800;
 }
 
 .opciones {
-    border: solid;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 35px;
     width: auto;
+    margin-right: 30px;
 }
 
 .rutas {
-    border: solid;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -82,28 +93,28 @@ body {
 }
 
 .inicio {
-    border: solid;
+    color: var(--color-text-uno);
     font-size: 15px;
     margin-left: 15px;
     margin-right: 15px;
 }
 
 .informacion {
-    border: solid;
+    color: var(--color-text-uno);
     font-size: 15px;
     margin-left: 15px;
     margin-right: 15px;
 }
 
 .login {
-    border: solid;
+    color: var(--color-text-uno);
     font-size: 15px;
     margin-left: 15px;
     margin-right: 5px;
 }
 
 .espacio {
-    border: solid;
+    border: solid 1px var(--color-text-uno);
     width: 0, 5px;
     height: 15px;
 }
@@ -112,12 +123,11 @@ body {
 /* Cabecera de la pagina */
 
 .cabecera {
-    border: solid;
-    background-image: url('img/fondoLibros.jpg');
+    background-image: url('/img/fondoLibros.jpg');
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
-    color: var();
+    background-position: center;
+    color: var(--color-text-dos);
     height: 180px;
     width: auto;
     text-align: center;
@@ -142,18 +152,17 @@ body {
 /* Contenido de seccion de pagina */
 
 .contenido {
-    border: solid;
+    background-color: var(--color-backgraund-uno);
     width: auto;
     height: auto;
 }
 
 .seccion {
-    border: solid;
     display: flex;
     justify-content: space-between;
     margin: 30px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
     height: auto;
 }
 
@@ -164,11 +173,13 @@ body {
 }
 
 .pregunta {
+    color: var(--color-text-uno);
     font-size: 30px;
     font-weight: 700;
 }
 
 .respuesta {
+    color: var(--color-text-uno);
     font-size: 17px;
     font-weight: 300;
 }
@@ -180,7 +191,9 @@ body {
 }
 
 .btn {
-    margin-left: 50px;
+    background-color: var(--color-btn);
+    color: var(--color-text-uno);
+    margin-left: 100px;
     margin-bottom: 20px;
     width: 200px;
     height: 40px;
@@ -193,13 +206,14 @@ body {
 /* footer de la pagina */
 
 .footer {
-    border: solid;
+    background-color: var(--color-footer);
     margin-top: auto;
     display: flex;
     justify-content: space-between;
 }
 
 .texto_footer {
+    color: var(--color-text-uno);
     margin: 20px;
     font-size: 15px;
     font-weight: 400;
@@ -221,3 +235,28 @@ body {
 
 
 /* Animaciones de la pagina */
+
+.enlace:hover .inicio {
+    color: var(--color-text-hover);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.enlace:hover .informacion {
+    color: var(--color-text-hover);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.enlace:hover .login {
+    color: var(--color-text-hover);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 0px 4px 8px var(--color-shadow);
+    background-color: var(--color-text-hover);
+    cursor: pointer;
+    transition: 0.3s;
+}

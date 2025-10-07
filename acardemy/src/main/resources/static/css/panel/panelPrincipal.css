@@ -2,13 +2,24 @@
 
 /* Variables */
 
-:root {}
+:root {
+    --color-navBar:  #5952D4;
+    --color-backgraund-uno:  #CBC8E3;
+    --color-backgraund-dos:  #D9D7E8;
+    --color-backgraund-tres:  #FAFAFA;
+    --color-text-uno:  #000000;
+    --color-text-dos:  #FFFFFF;
+    --color-btn:  #6FAEF6;
+    --color-footer:  #1D4273;
+    --color-text-hover:  #BAC8FF;
+    --color-shadow:  #1F1F1F;
+}
 
 
 /* Cuerpo de la pagina */
 
 body {
-    border: solid 2px red;
+    background-color: var(--color-backgraund-uno);
     font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
@@ -25,10 +36,10 @@ body {
 /*Barra de navegacion */
 
 .nav {
+    background-color: var(--color-navBar);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: solid;
     margin: 0;
     padding: 15px;
     height: 25px;
@@ -38,41 +49,41 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: solid;
     width: auto;
     height: 30px;
+    margin-left: 30px;
 }
 
 .enlace {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: solid;
     text-decoration: none;
     cursor: pointer;
 }
 
 .icono {
+    color: var(--color-text-uno);
     font-size: 30px;
     margin-right: 10px;
 }
 
 .titulo {
+    color: var(--color-text-uno);
     font-size: 25px;
     font-weight: 800;
 }
 
 .opciones {
-    border: solid;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 35px;
     width: auto;
+    margin-right: 30px;
 }
 
 .rutas {
-    border: solid;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -82,28 +93,28 @@ body {
 }
 
 .inicio {
-    border: solid;
+    color: var(--color-text-uno);
     font-size: 15px;
     margin-left: 15px;
     margin-right: 15px;
 }
 
 .informacion {
-    border: solid;
+    color: var(--color-text-uno);
     font-size: 15px;
     margin-left: 15px;
     margin-right: 15px;
 }
 
 .salir {
-    border: solid;
+    color: var(--color-text-uno);
     font-size: 15px;
     margin-left: 15px;
     margin-right: 5px;
 }
 
 .espacio {
-    border: solid;
+    border: solid 1px;
     width: 0, 5px;
     height: 15px;
 }
@@ -112,7 +123,7 @@ body {
 /* Contenido de la pagina */
 
 .contenido {
-    border: solid;
+    background-color: var(--color-backgraund-uno);
     height: auto;
     width: auto;
 }
@@ -121,10 +132,12 @@ body {
 /*  */
 
 
+
+
 /* footer */
 
 .footer {
-    border: solid;
+    background-color: var(--color-footer);
     margin-top: auto;
     display: flex;
     justify-content: space-between;
@@ -152,3 +165,21 @@ body {
 
 
 /* Animaciones de la pagina */
+
+.enlace:hover .inicio {
+    color: var(--color-text-hover);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.enlace:hover .informacion {
+    color: var(--color-text-hover);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.enlace:hover .salir {
+    color: var(--color-text-hover);
+    transition: 0.3s;
+    cursor: pointer;
+}

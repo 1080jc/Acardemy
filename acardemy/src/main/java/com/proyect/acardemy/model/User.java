@@ -1,15 +1,11 @@
 package com.proyect.acardemy.model;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
-import jakarta.annotation.Generated;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Entity
@@ -25,30 +21,26 @@ public class User {
     private Long id;
 
     @Column(name = "nombre", nullable = false)
-    @NotBlank(message = "El nombre no puede estar vacio")
     private String nombre;
 
     @Column(name = "apellido", nullable = false)
-    @NotBlank(message = "El apellido no puede estar vacio")
     private String apellido;
 
     @Column(name = "correo", nullable = false, unique = true)
-    @NotBlank(message = "El correo no puede estar vacio")
     private String email;
 
     @Column(name = "contraseña", nullable = false)
-    @NotBlank(message = "La contraseña no puede estar vacio")
     private String password;
 
     @Column(name = "fecha de registro")
-    private LocalDateTime fechaRegistro;
+    private LocalDate fechaRegistro;
 
 
     //Constructores
     public User() {
     }
 
-    public User(Long id, String nombre, String apellido, String email, String password, LocalDateTime fechaRegistro) {
+    public User(Long id, String nombre, String apellido, String email, String password, LocalDate fechaRegistro) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -59,43 +51,53 @@ public class User {
 
 
     //Getters & Setters
-    public @NotBlank(message = "El nombre no puede estar vacio") String getNombre() {
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(@NotBlank(message = "El nombre no puede estar vacio") String nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public @NotBlank(message = "El apellido no puede estar vacio") String getApellido() {
+    public String getApellido() {
         return apellido;
     }
 
-    public void setApellido(@NotBlank(message = "El apellido no puede estar vacio") String apellido) {
+    public void setApellido(String apellido) {
         this.apellido = apellido;
     }
 
-    public @NotBlank(message = "El correo no puede estar vacio") String getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(@NotBlank(message = "El correo no puede estar vacio") String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public @NotBlank(message = "La contraseña no puede estar vacio") String getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(@NotBlank(message = "La contraseña no puede estar vacio") String password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
-    public LocalDateTime getFechaRegistro() {
+    public LocalDate getFechaRegistro() {
         return fechaRegistro;
     }
 
-    public void setFechaRegistro(LocalDateTime fechaRegistro) {
+    public void setFechaRegistro(LocalDate fechaRegistro) {
         this.fechaRegistro = fechaRegistro;
     }
 }

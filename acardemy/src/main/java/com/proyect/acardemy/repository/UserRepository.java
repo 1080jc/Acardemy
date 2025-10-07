@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.proyect.acardemy.model.User;
 
-import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Repository

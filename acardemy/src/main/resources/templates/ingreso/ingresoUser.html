@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta mane="autor" content="#">
+    <meta name="description" content="#">
+    <meta name="keywords" content="#">
+    <title>Acardemy - Ingreso de usuario</title>
+    <link rel="favicon" type="image/png" th:href="@{favicon/}">
+    <link rel="stylesheet" th:href="@{css/ingreso/ingresoUser.css}">
+</head>
+<body>
+    <!-- Pagina -->
+    <div class="pagina">
+        <h1 class="titulo">Acardemy</h1>
+        <p class="texto">Inicia Sesión para comenzar con tus estudio.</p>
+        <!--Formulario de ingreso-->
+            <main class="cuadro">
+                <h2 class="titulo_ingreso">Bienvenido de nuevo</h2>
+                <form class="formulario" th:action="@{/ingreso}" th:object="${user}" method="post">
+                    <div class="input">
+                        <ion-icon class="icono_ingreso" name="mail-outline"></ion-icon>
+                        <div class="label">
+                            <label class="peticion">Correo electrónico</label>
+                            <input class="ingreso" type="email" th:field="*{email}" placeholder="Ingrese su correo" required>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <ion-icon class="icono_ingreso" name="key-outline"></ion-icon>
+                        <div class="label">
+                            <label class="peticion">Contraseña</label>
+                            <input class="ingreso" type="password" th:field="*{password}" placeholder="Ingrese su contraseña" required>
+                            <a class="enlace" th:href="@{/recuperar}">¿Olvidaste tu contraseña?</a>
+                        </div> 
+                    </div>
+                    <button class="btn" type="submit">Iniciar Sesión</button>
+                </form>
+                <p class="descripcion">Si aun no se ha registrado puede <a class="registro" th:href="@{/registro}">Registrarse aqui</a></p>
+            </main>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

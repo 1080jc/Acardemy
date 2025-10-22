@@ -1,272 +1,151 @@
+/* "Roboto", sans-serif */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* "Montserrat", sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Variables */
-
+/* Colores */
 :root {
-    --color-navBar:  #5952D4;
-    --color-backgraund-uno:  #CBC8E3;
-    --color-backgraund-dos:  #D9D7E8;
-    --color-backgraund-tres:  #FAFAFA;
-    --color-text-uno:  #000000;
-    --color-text-dos:  #FFFFFF;
-    --color-btn:  #6FAEF6;
-    --color-footer:  #1D4273;
-    --color-text-hover:  #BAC8FF;
-    --color-shadow:  #1F1F1F;
+    /* Colores Fondo */
+    --background-primario: #F8F9FA;
+    --background-secundario: #F1F5F9;
+    /* Colores Texto */
+    --text-primario: #131313;
+    --text-secundario: #5e6164;
+    --text-terciario: #f3f5f8;
+    /* Colores Botones */
+    --btn-primario: #046ad6;
+    --btn-secundario: #E2E8F0;
+    /* Colores Etiquetas */
+    --label-primario: #FFBD00;
+    --label-secundario: #F9EEC9;
+    /* Colores Sombras & Lineas */
+    --shadow-primario: #d9e1eb;
+    /* Colores Pie de pagina */
+    --footer-primario: #F8F9FA;
+    /* Colores hover */
+    --hover-btn-primario: #3986d8;
+    --hover-btn-secundario: #b0bac7;
 }
 
-
-/* Cuerpo de la pagina */
-
+/* Pagina */
 body {
-    background-color: var(--color-backgraund-uno);
-    font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
-}
+    box-sizing: border-box;
+    background-color: var(--background-secundario);
 
+}
 .pagina {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     margin: 0;
-}
-
-
-/*Barra de navegacion */
-
-.nav {
-    background-color: var(--color-navBar);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    padding: 15px;
-    height: 25px;
-}
-
-.logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: auto;
-    height: 30px;
-    margin-left: 30px;
-}
-
-.enlace {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.icono {
-    color: var(--color-text-uno);
-    font-size: 30px;
-    margin-right: 10px;
-}
-
-.titulo {
-    color: var(--color-text-uno);
-    font-size: 25px;
-    font-weight: 800;
-}
-
-.opciones {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 35px;
-    width: auto;
-    margin-right: 30px;
-}
-
-.rutas {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    height: 35px;
-    width: auto;
-}
-
-.inicio {
-    color: var(--color-text-uno);
-    font-size: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.informacion {
-    color: var(--color-text-uno);
-    font-size: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.login {
-    color: var(--color-text-uno);
-    font-size: 15px;
-    margin-left: 15px;
-    margin-right: 5px;
-}
-
-.espacio {
-    border: solid 1px;
-    width: 0, 5px;
-    height: 15px;
-}
-
-
-/* Contenido de la pagina */
-
-.contenido {
-    background-color: var(--color-backgraund-uno);
-    height: auto;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
-
-
-/* Formulario */
-
-.cuadro {
-    background-color: var(--color-backgraund-dos);
+    padding: 0;
+    background-color: var(--background-secundario);
     display: grid;
     justify-content: center;
     align-items: center;
-    width: 500px;
-    height: auto;
-    margin: 50px;
-    margin-top: 100px;
-    border-radius: 10px;
-    box-shadow: var(--color-shadow ) 0px 5px 15px;
+}
+
+.titulo {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: var(--text-primario);
+    text-align: center;
+    margin-bottom: 3px;
+    margin-top: 80px;
+}
+
+.texto {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-secundario);
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+/* Formulario de ingreso */
+.cuadro {
+    display: grid;
+    background-color: var(--background-primario);
+    padding: 30px 0;
+    border-radius: 20px;
+    box-shadow: 1px 2px var(--shadow-primario);
 }
 
 .titulo_recuperar {
-    color: var(--color-text-uno);
-    font-size: 30px;
-    font-weight: 900;
-    margin-top: 10px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: var(--text-primario);
+    margin-top: 20px;
+    margin-bottom: auto;
+}
+
+.descripcion {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: var(--text-secundario);
+    padding: 0% 20%;
     text-align: center;
 }
 
 .formulario {
     display: grid;
-    justify-content: end;
-    align-items: center;
-    width: auto;
-    height: auto;
+    justify-content: center;
 }
 
 .input {
-    width: auto;
-    height: auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 20px;
+    padding: 20px 20px;
 }
 
-
 .icono_recuperar {
-    color: var(--color-text-uno);
     font-size: 30px;
-    font-weight: 700;
+}
+
+.label {
+    display: grid;
+}
+
+.peticion {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-primario);
 }
 
 .ingreso {
-    background-color: var(--color-backgraund-tres);
-    margin: 20px;
-    height: 30px;
-    width: 230px;
-    border: none;
-    border-bottom: solid 1.5px;
-    cursor: pointer;
-    color: var(--color-text-uno);
+    padding: 10px 10px;
+    width: 300px;
+    border-radius: 10px;
+    border-color: var(--shadow-primario);
+    background-color: var(--background-secundario);
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
 }
 
 .btn {
-    background-color: var(--color-btn);
-    color: var(--color-text-uno);
-    margin: 20px;
-    margin-bottom: 30px;
-    height: 50px;
-    width: 300px;
-    font-size: 30px;
-    font-weight: 700;
-    border-radius: 30px;
-    cursor: pointer;
+    padding: 15px;
+    background-color: var(--btn-primario);
+    border-radius: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-terciario);
+    border-color: var(--shadow-primario);
 }
 
-
-/* footer */
-
-.footer {
-    background-color: var(--color-footer);
-    margin-top: auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-.texto_footer {
-    margin: 20px;
+.inicio {
+    margin-top: 25px;
+    font-family: 'Roboto', sans-serif;
     font-size: 15px;
     font-weight: 400;
-}
-
-.rutas_footer {
-    margin-right: 40px;
-    list-style: none;
-    width: auto;
-    height: auto;
-}
-
-.enlace_footer {
     text-decoration: none;
-    text-align: left;
-    font-size: 15px;
-    font-weight: 400;
+    text-align: center;
 }
 
-
-/* Animaciones de la pagina */
-
-.enlace:hover .inicio {
-    color: var(--color-text-hover);
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.enlace:hover .informacion {
-    color: var(--color-text-hover);
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.enlace:hover .login {
-    color: var(--color-text-hover);
-    transition: 0.3s;
-    cursor: pointer;
-}
-
+/* Animacion */
 .btn:hover {
-    box-shadow: 0px 4px 8px var(--color-shadow);
-    background-color: var(--color-text-hover);
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.ingreso:focus {
-    outline: none;
-    border-bottom: solid 2px var(--color-text-hover);
-    transition: 0.3s;
-}
-
-.ingreso:hover {
-    border-bottom: solid 2px var(--color-text-hover);
-    transition: 0.3s;
+    background-color: var(--hover-btn-primario);
 }

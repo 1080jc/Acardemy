@@ -1,262 +1,465 @@
+/* "Roboto", sans-serif */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* "Montserrat", sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Variables */
-
+/* Colores */
 :root {
-    --color-navBar:  #5952D4;
-    --color-backgraund-uno:  #CBC8E3;
-    --color-backgraund-dos:  #D9D7E8;
-    --color-backgraund-tres:  #FAFAFA;
-    --color-text-uno:  #000000;
-    --color-text-dos:  #FFFFFF;
-    --color-btn:  #6FAEF6;
-    --color-footer:  #1D4273;
-    --color-text-hover:  #BAC8FF;
-    --color-shadow:  #1F1F1F;
+    /* Colores Fondo */
+    --background-primario: #F8F9FA;
+    --background-secundario: #F1F5F9;
+    /* Colores Texto */
+    --text-primario: #131313;
+    --text-secundario: #5e6164;
+    --text-terciario: #f3f5f8;
+    /* Colores Botones */
+    --btn-primario: #046ad6;
+    --btn-secundario: #E2E8F0;
+    /* Colores Etiquetas */
+    --label-primario: #FFBD00;
+    --label-secundario: #F9EEC9;
+    /* Colores Sombras & Lineas */
+    --shadow-primario: #d9e1eb;
+    /* Colores Pie de pagina */
+    --footer-primario: #F8F9FA;
+    /* Colores hover */
+    --hover-btn-primario: #3986d8;
+    --hover-btn-secundario: #b0bac7;
 }
 
-
-/* Cuerpo de la pagina */
-
+/* Pagina */
 body {
-    background-color: var(--color-backgraund-uno);
-    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.aPagina {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-primario);
+}
+
+/* Cabecera */
+.cabecera {
+    background-color: var(--background-primario);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 10;
+    padding: 20px 40px;
+    box-shadow: 1px 2px var(--shadow-primario);
+}
+
+/* Logo de la pagina */
+.enlace {
+    text-decoration: none;
+}
+
+.nombre {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 27px;
+    color: var(--text-primario);
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Opciones de navegacion */
+.opciones {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
     margin: 0;
     padding: 0;
 }
 
-.pagina {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-}
-
-
-/*Barra de navegacion */
-
-.nav {
-    background-color: var(--color-navBar);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    padding: 15px;
-    height: 25px;
-}
-
-.logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: auto;
-    height: 30px;
-    margin-left: 30px;
-}
-
-.enlace {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
+.inicio a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--text-secundario);
     cursor: pointer;
 }
 
-.icono {
-    color: var(--color-text-uno);
-    font-size: 30px;
-    margin-right: 10px;
+.caracteristicas a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--text-secundario);
+    cursor: pointer;
 }
 
-.titulo {
-    color: var(--color-text-uno);
-    font-size: 25px;
-    font-weight: 800;
+.acerca a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--text-secundario);
+    cursor: pointer;
 }
 
-.opciones {
+/* Area de ingreso */
+.aBtn {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 35px;
-    width: auto;
-    margin-right: 30px;
+    width: 300px;
 }
 
-.rutas {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    height: 35px;
-    width: auto;
-}
-
-.inicio {
-    color: var(--color-text-uno);
+.ingreso {
+    border: none;
+    background-color: var(--btn-primario);
+    color: var(--text-terciario);
+    font-family: 'Roboto', sans-serif;
     font-size: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.informacion {
-    color: var(--color-text-uno);
-    font-size: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.login {
-    color: var(--color-text-uno);
-    font-size: 15px;
-    margin-left: 15px;
-    margin-right: 5px;
-}
-
-.espacio {
-    border: solid 1px var(--color-text-uno);
-    width: 0, 5px;
-    height: 15px;
-}
-
-
-/* Cabecera de la pagina */
-
-.cabecera {
-    background-image: url('/img/fondoLibros.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: var(--color-text-dos);
-    height: 180px;
-    width: auto;
-    text-align: center;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 20px
-}
-
-.subtitulo {
-    font-size: 30px;
     font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 35px;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.texto {
-    font-size: 17px;
-    font-weight: 400;
+.registro {
+    border: none;
+    background-color: var(--btn-secundario);
+    color: var(--text-primario);
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-
-/* Contenido de seccion de pagina */
-
-.contenido {
-    background-color: var(--color-backgraund-uno);
-    width: auto;
-    height: auto;
+/* Contenido de la pagina */
+.aInicio {
+    padding-top: 5rem;
+    box-shadow: 10px 20px var(--shadow-primario);
 }
 
-.seccion {
+.principio {
     display: flex;
-    justify-content: space-between;
-    margin: 30px;
-    margin-left: 100px;
-    margin-right: 100px;
-    height: auto;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 50px;
 }
 
 .introduccion {
-    padding-right: 80px;
-    height: auto;
     width: 50%;
+    padding: 10px;
 }
 
-.pregunta {
-    color: var(--color-text-uno);
+.titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    color: var(--text-primario);
+}
+
+.descripcion {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: var(--text-secundario);
+}
+
+.comenzar {
+    border: none;
+    background-color: var(--btn-primario);
+    color: var(--text-terciario);
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    width: 15rem;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.imagen { 
+    background-color: var(--background-secundario);
+    width: 50%;
+    height: 20rem;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+/* Caracteristicas */
+.aCaracteristicas {
+    background-color: var(--background-secundario);
+    padding: 40px 60px;
+    height: auto;
+}
+
+.subtitulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    color: var(--text-primario);
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.mensaje {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: var(--text-secundario);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto;
+    height: auto;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.itemIcono {
     font-size: 30px;
     font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--label-primario);
+    background-color: var(--label-secundario);
 }
 
-.respuesta {
-    color: var(--color-text-uno);
+.itemTitulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.itemDescripcion {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-secundario);
+}
+
+.item1 {
+    padding: 15px 15px;
+    border-radius: 20px;
+    background-color: var(--background-primario);
+    box-shadow: 3px 3px var(--shadow-primario);
+}
+
+.item2 {
+    padding: 15px 15px;
+    border-radius: 20px;
+    background-color: var(--background-primario);
+    box-shadow: 3px 3px var(--shadow-primario);
+}
+
+.item3 {
+    padding: 15px 15px;
+    border-radius: 20px;
+    background-color: var(--background-primario);
+    box-shadow: 3px 3px var(--shadow-primario);
+}
+
+.item4 {
+    padding: 15px 15px;
+    border-radius: 20px;
+    background-color: var(--background-primario);
+    box-shadow: 3px 3px var(--shadow-primario);
+}
+
+/* Ingreso a registrarse */
+.aRegistro {
+    display: grid;
+    justify-content: center;
+    background-color: var(--background-primario);
+    padding: 40px 0;
+}
+
+.subtituloRegistrarse {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    color: var(--text-primario);
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.registrarse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.enlaceRegistrarse {
+    text-decoration: none;
+    width: 10rem;
+}
+
+.btnRegistro {
+    border: none;
+    background-color: var(--btn-secundario);
+    color: var(--text-primario);
+    font-family: 'Roboto', sans-serif;
     font-size: 17px;
+    font-weight: 700;
+    width: 10rem;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.linea {
+    background-color: var(--shadow-primario);
+    width: 100%;
+    height: 2px;
+}
+
+/* Pie de pagina */
+.footer {
+    left: 0;
+    right: 0;
+    min-height: 100px;
+    padding: 50px 30px;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    background-color: var(--footer-primario);
+}
+
+.opcionesFooter {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.terminos {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--text-secundario);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.politica {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--text-secundario);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.contacto {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--text-secundario);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.redesFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;           
+}
+
+.facebook {
+    font-size:  35px;
+    color: var(--text-secundario);
+}
+
+.instagram {
+    font-size:  35px;
+    color: var(--text-secundario);
+}
+
+.twitter {
+    font-size:  35px;
+    color: var(--text-secundario);
+}
+
+.texto {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: var(--text-secundario);
     font-weight: 300;
 }
 
-.foto {
-    border: solid;
-    width: 50%;
-    height: auto;
-}
-
-.btn {
-    background-color: var(--color-btn);
-    color: var(--color-text-uno);
-    margin-left: 100px;
-    margin-bottom: 20px;
-    width: 200px;
-    height: 40px;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-
-/* footer de la pagina */
-
-.footer {
-    background-color: var(--color-footer);
-    margin-top: auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-.texto_footer {
-    color: var(--color-text-uno);
-    margin: 20px;
-    font-size: 15px;
-    font-weight: 400;
-}
-
-.rutas_footer {
-    margin-right: 40px;
-    list-style: none;
-    width: auto;
-    height: auto;
-}
-
-.enlace_footer {
-    text-decoration: none;
-    text-align: left;
-    font-size: 15px;
-    font-weight: 400;
-}
-
-
-/* Animaciones de la pagina */
-
-.enlace:hover .inicio {
-    color: var(--color-text-hover);
+/* Animaciones */
+.inicio:hover .enlace{
     transition: 0.3s;
-    cursor: pointer;
+    color: var(--hover-btn-primario);
 }
 
-.enlace:hover .informacion {
-    color: var(--color-text-hover);
+.caracteristicas:hover .enlace{
     transition: 0.3s;
-    cursor: pointer;
+    color: var(--hover-btn-primario);
 }
 
-.enlace:hover .login {
-    color: var(--color-text-hover);
+.acerca:hover .enlace{
     transition: 0.3s;
-    cursor: pointer;
+    color: var(--hover-btn-primario);
 }
 
-.btn:hover {
-    box-shadow: 0px 4px 8px var(--color-shadow);
-    background-color: var(--color-text-hover);
-    cursor: pointer;
+.enlace:hover .ingreso{
     transition: 0.3s;
+    background-color: var(--hover-btn-primario);
+}
+
+.enlace:hover .registro{
+    transition: 0.3s;
+    background-color: var(--hover-btn-secundario);
+}
+
+.enlace:hover .comenzar{
+    transition: 0.3s;
+    background-color: var(--hover-btn-primario);
+}
+
+.enlaceRegistrarse:hover .btnRegistro{
+    transition: 0.3s;
+    background-color: var(--hover-btn-secundario);
+}
+
+.enlace:hover .terminos {
+    transition: 0.3s;
+    color: var(--hover-btn-primario);
+}
+
+.enlace:hover .politica {
+    transition: 0.3s;
+    color: var(--hover-btn-primario);
+}
+
+.enlace:hover .contacto {
+    transition: 0.3s;
+    color: var(--hover-btn-primario);
+}
+
+.enlace:hover .facebook {
+    transition: 0.3s;
+    color: var(--hover-btn-primario);
+}
+
+.enlace:hover .instagram {
+    transition: 0.3s;
+    color: var(--hover-btn-primario);
+}
+
+.enlace:hover .twitter {
+    transition: 0.3s;
+    color: var(--hover-btn-primario);
 }

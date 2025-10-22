@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta mane="autor" content="#">
+    <meta name="description" content="#">
+    <meta name="keywords" content="#">
+    <title>Acardemy - Registro de usuario</title>
+|   <link rel="favicon" type="image/png" th:href="@{favicon/}">
+    <link rel="stylesheet" th:href="@{css/registro/registroUser.css}">
+</head>
+<body>
+    <!-- Pagina -->
+    <div class="pagina">
+        <h1 class="titulo">Acardemy</h1>
+        <p class="texto">Crea una cuenta para comenzar con tus estudio.</p>
+        <!--Formulario de registro-->
+            <main class="cuadro">
+                <h2 class="titulo_registro">Crear una cuanta</h2>
+                <form class="formulario" th:action="@{/registro}" th:object="${user}" method="post">
+                    <div class="input">
+                        <ion-icon class="icono_registro" name="person-circle-outline"></ion-icon>
+                        <div class="label">
+                            <label class="peticion">Nombre</label>
+                            <input class="ingreso" type="text" th:field="*{nombre}" placeholder="Ingrese su nombre" required>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <ion-icon class="icono_registro" name="person-circle-outline"></ion-icon>
+                        <div class="label">
+                            <label class="peticion">Apellido</label>
+                            <input class="ingreso" type="text" th:field="*{apellido}" placeholder="Ingrese su apellido" required>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <ion-icon class="icono_registro" name="mail-outline"></ion-icon>
+                        <div class="label">
+                            <label class="peticion">Correo electrónico</label>
+                            <input class="ingreso" type="email" th:field="*{email}" placeholder="Ingrese su correo" required>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <ion-icon class="icono_registro" name="key-outline"></ion-icon>
+                        <div class="label">
+                            <label class="peticion">Contraseña</label>
+                            <input class="ingreso" type="password" th:field="*{password}" placeholder="Ingrese su contraseña" required>
+                        </div>    
+                    </div>
+                    <button class="btn" type="submit">Registrarse</button>
+                </form>
+                <p class="sesion">Si ya se registro puede <a class="inicio" th:href="@{/ingreso}">Iniciar Sesión</a></p>
+                <p class="leyes">Al registrarse, acepta nuestros <a class="enlace" th:href="@{/terminos}">Térmnos de Servicio</a> y <a class="enlace" th:href="@{/politicas}">Politica de Privacidad</a></p>
+            </main>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

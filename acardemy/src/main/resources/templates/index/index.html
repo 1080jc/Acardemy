@@ -1,88 +1,118 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="autor" content="">
-    <title>Acardemy</title>
-    <link rel="favicon" th:href="@{favicon/faviconWhite.jpg}" type="icon/jpg" sizes="334x267">
+    <meta mane="autor" content="Julian Alfonso Cantillo Cortina, Mateo Julian Payares Carcamo, Luis Manuel Goez Ahumedo">
+    <meta name="description" content="#">
+    <meta name="keywords" content="#">
+    <title>Acardemy - Pagina principal</title>
+    <link rel="favicon" type="image/png" th:href="@{favicon/}">
     <link rel="stylesheet" th:href="@{css/index/index.css}">
 </head>
-
 <body>
-    <!--Pagina-->
-    <div class="pagina">
-        <!--Barra de navegacion-->
-        <header class="nav">
-            <div class="logo">
+    <!-- Pagina -->
+    <div class="aPagina">
+        <!-- Cabecera de la pagina -->
+        <header class="cabecera">
+            <!-- Nombre de la pagina -->
+            <div class="aNombre">
                 <a class="enlace" th:href="@{/index}">
-                    <ion-icon class="icono" name="school-sharp"></ion-icon>
-                    <span class="titulo">Acardemy</span>
+                    <h1 class="nombre">Acardemy</h1>
                 </a>
             </div>
-            <div class="opciones">
-                <ul class="rutas">
-                    <a class="enlace" th:href="@{/index}">
-                        <li class="inicio">Inicio</li>
-                    </a>
-                    <div class="espacio"></div>
-                    <a class="enlace" th:href="@{/informacion}">
-                        <li class="informacion">Informacion</li>
-                    </a>
-                    <div class="espacio"></div>
-                    <a class="enlace" th:href="@{/login}">
-                        <li class="login">Inicia Sesion</li>
-                    </a>
+            <!-- Area de navegacion -->
+            <nav class="navegacion">
+                <!-- Opciones de navegacion -->
+                <ul class="opciones">
+                    <li class="inicio"><a class="enlace" th:href="@{/index}">Inicio</a></li>
+                    <li class="caracteristicas"><a class="enlace" href="#caracteristica">Caracteristicas</a></li>
+                    <li class="acerca"><a class="enlace" th:href="@{/acerca}">Acerca</a></li>
                 </ul>
+            </nav>
+            <!-- Boton de inicio de sesion -->
+            <div class="aBtn">
+                <a class="enlace" th:href="@{/ingreso}">
+                    <button class="ingreso">Iniciar Sesión</button>
+                </a>
+                <a class="enlace" th:href="@{/registro}">
+                    <button class="registro">Registrarse</button>
+                </a>
             </div>
         </header>
-        <!--Cabecera-->
-        <div class="cabecera">
-            <h2 class="subtitulo">Organiza tus temas y estudialos donde quieras</h2>
-            <p class="texto">una plataforma de aprendisaje por medio de flashcards para ayudarte a recordar esos temas que mas se te dificultan</p>
-        </div>
-        <!--Contenido de pagina-->
-        <div class="contenido">
-            <section class="seccion">
+        <!-- Contenido -->
+        <div id="inicio" class="aInicio">
+            <!-- Inicio -->
+            <div class="principio">
                 <div class="introduccion">
-                    <h1 class="pregunta">¿Que es Acardemy?</h1>
-                    <p class="respuesta">Es una herramienta para ayudar a aquellas personas que les cueste recordar o memorizarse palabras o conseptos de temas, materias o cualquier tipo de area en la que quiera estudias, ideal para estudiantes de cualquier tipo ya sea en
-                        algun instituto o de forma autodidacta.------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+                    <h1 class="titulo">Domina Cualquier <br>Tema con <br>Acardemy.</h1>
+                    <p class="descripcion">Acardemy utiliza la ciencia del aprendizaje para ayudarte a retener informacion de manera más eficiente, Estudia de forma más inteligente, no más dura.</p>
+                    <a class="enlace" th:href="@{/ingreso}">
+                        <button class="comenzar">Empieza a Estudiar</button>
+                    </a>
                 </div>
-                <div class="foto">
+                <div class="imagen">
+                    <img class="foto" th:src="@{img/}" alt="panel principal">
                 </div>
-            </section>
-            <a class="enlace" th:href="@{/register}">
-                <button class="btn">Registrarse</button>
-            </a>
+            </div>
+            <!-- Caracteristicas -->
+            <div id="caracteristica" class="aCaracteristicas">
+                <h2 class="subtitulo">Características Claves</h2>
+                <p class="mensaje">Descubre cómo Acardemy puede revilucionar tus hábitos de estudio.</p>
+                <div class="contenedor">
+                    <div class="item1">
+                        <ion-icon class="itemIcono" name="file-tray-full-outline"></ion-icon>
+                        <h3 class="itemTitulo">Organiza tu Conocimiento Sin Esfuerzo</h3>
+                        <p class="itemDescripcion">Crea y gestiona mazos para estructurar tus materiales de aprendisaje de forma lógica e intuitiva.</p>
+                    </div>
+                    <div class="item2">
+                        <ion-icon class="itemIcono" name="checkbox-outline"></ion-icon>
+                        <h3 class="itemTitulo">Dos Modos de Estudio, Doble Eficacia.</h3>
+                        <p class="itemDescripcion">Elige entre la revición clásica de flashcard o la escritura activa para reforzar tu memoria y comprención.</p>
+                    </div>
+                    <div class="item3">
+                        <ion-icon class="itemIcono" name="repeat-outline"></ion-icon>
+                        <h3 class="itemTitulo">Practica y aprende con la Repetición Espaciada</h3>
+                        <p class="itemDescripcion">Nuestro algoritmo programa la revición en intervalos óptimos para maximizar la retención a largo plazo.</p>
+                    </div>
+                    <div class="item4">
+                        <ion-icon class="itemIcono" name="share-social-outline"></ion-icon>
+                        <h3 class="itemTitulo">Comparte y Descubre Conocimientos</h3>
+                        <p class="itemDescripcion">Comparte tus mazos con la comunidad y explora contenido de alta calidad creado por otros usuarios.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Registrarse -->
+             <div class="aRegistro">
+                <h2 class="subtituloRegistrarse">¿Listo para empezar?</h2>
+                <p class="mensaje">Únete a Acardemy hoy y coomienza a estudiar de manera más comoda.</p>
+                <div class="registrarse">
+                    <a class="enlaceRegistrarse" th:href="@{/registro}">
+                        <button class="btnRegistro">Regístrate Ahora</button>
+                    </a>
+                </div>
+            </div>
         </div>
-        <!--Pie de pagina-->
+        <div class="linea"></div>
+        <!-- Pie de pagina -->
         <footer class="footer">
-            <p class="texto_footer">--------</p>
-            <ul class="rutas_footer">
-                <a class="enlace_footer" th:href="@{#}">
-                    <li class="">--------------</li>
-                </a>
-                <br>
-                <a class="enlace_footer" th:href="@{#}">
-                    <li class="">----------------</li>
-                </a>
-                <br>
-                <a class="enlace_footer" th:href="@{#}">
-                    <li class="">---------</li>
-                </a>
-            </ul>
+            <ul class="opcionesFooter">
+                    <a class="enlace" th:href="@{/terminos}"><li class="terminos">Termínos de Servicio</li></a>
+                    <a class="enlace" th:href="@{/politicas}"><li class="politica">Politica de Privacidad</li></a>
+                    <a class="enlace" th:href="@{/contactos}"><li class="contacto">Contactos</li></a>
+                </ul>
+            <div class="redesFooter">
+                <a class="enlace" href="#"><ion-icon class="facebook" name="logo-facebook"></ion-icon></a>
+                <a class="enlace" href="#"><ion-icon class="instagram" name="logo-instagram"></ion-icon></a>
+                <a class="enlace" href="#"><ion-icon class="twitter" name="logo-twitter"></ion-icon></a>
+            </div>
+            <p class="texto">© 2024 Acardemy. Todos los derechos reservados.</p>
         </footer>
     </div>
-
-    <!--Script-->
-    <script>
-        src = "js/index.js"
-    </script>
+    
+    <!-- Scripts -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
-
 </html>

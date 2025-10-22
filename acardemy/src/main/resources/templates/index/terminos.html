@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta mane="autor" content="#">
+    <meta name="description" content="#">
+    <meta name="keywords" content="#">
+    <title>Acardemy - Terminos y condiciónes</title>
+|   <link rel="favicon" type="image/png" th:href="@{favicon/}">
+    <link rel="stylesheet" th:href="@{css/index/terminos.css}">
+</head>
+<body>
+    <!-- Pagina -->
+    <div class="pagina">
+        <!-- Cabecera de la pagina -->
+        <header class="cabecera">
+            <!-- Nombre de la pagina -->
+            <div class="aNombre">
+                <a class="enlace" th:href="@{/index}">
+                    <h1 class="nombre">Acardemy</h1>
+                </a>
+            </div>
+            <!-- Area de navegacion -->
+            <nav class="navegacion">
+                <!-- Opciones de navegacion -->
+                <ul class="opciones">
+                    <li class="inicio"><a class="enlace" th:href="@{/index}">Inicio</a></li>
+                    <li class="acerca"><a class="enlace" th:href="@{/acerca}">Acerca</a></li>
+                </ul>
+            </nav>
+            <!-- Boton de inicio de sesion -->
+            <div class="aBtn">
+                <a class="enlace" th:href="@{/ingreso}">
+                    <button class="ingreso">Iniciar Sesión</button>
+                </a>
+                <a class="enlace" th:href="@{/registro}">
+                    <button class="registro">Registrarse</button>
+                </a>
+            </div>
+        </header>
+        <!-- Contenido -->
+        <div class="contenido">
+            <main class="cuadro">
+                <ion-icon class="icono" name="document-text-outline"></ion-icon>
+                <div class="titulo">
+                    <h2 class="nombre">Términos y Condiciones de Uso</h2>
+                    <p class="mensage">Última actualizació: 24 de Octubre de 2025</p>
+                </div>
+                <!-- Secciones de informacion -->
+                <div class="informacion">
+                    <section class="seccion">
+                        <h3 class="subtitulo">Sección 1: Introducción</h3>
+                        <article class="articulo">
+                            <p class="textoS">Bienvenido a Acardemy. Estos términos y condiciones describen las reglas y regulaciones para el uso del sitio web de Acardemy, ubicado en acardemy.com. Al acceder a este sitio web, asumimos que aceptas estos terminos y condiciones. No continúes usando Acardemy si no estás de acuerdo con todos los términos y condiciones establecidos en esta página.</p>
+                        </article>
+                    </section>
+                    <section class="seccion">
+                        <h3 class="subtitulo">Sección 2: Definiciones</h3>
+                        <article class="articulo">
+                            <p class="textoS">Los suguientes términos tendran los significados que se les atribuyen a continuación: "Usuario" se refiere a cualquier persona que acceda o utilice el servicio. "Contenido" se refiere a cuanquier texto, imagen u otro material que se pueda publicar en el servicio. "Servicio" se refiere al sitio web de acardemy.</p>
+                        </article>
+                    </section>
+                    <section class="seccion">
+                        <h3 class="subtitulo">Sección 3: Uso de la cuenta y responsabilidades del usuario</h3>
+                        <article class="articulo">
+                            <p class="textoS">Para acceder a ciertas funciones de Acardemy, deberas crear una cuenta. Eres responsable de mantener la confidencialidad de tu contraseña y de todas las actividades qie ocurran bajo tu cuenta. Aceptas notificar inmediatamente a Acardemy sobre cuanquier uso no autorizado de tu cuenta.</p>
+                        </article>
+                    </section>
+                </div>
+                <div class="boton">
+                    <a class="enlace" th:href="@{/index}">
+                        <button class="btn">Aceptar y continuar</button>
+                    </a>
+                </div>
+            </main>
+        </div>
+        <div class="linea"></div>
+        <!-- Pie de pagina -->
+        <footer class="footer">
+            <ul class="opcionesFooter">
+                    <a class="enlace" th:href="@{/terminos}"><li class="terminos">Termínos de Servicio</li></a>
+                    <a class="enlace" th:href="@{/politicas}"><li class="politica">Politica de Privacidad</li></a>
+                    <a class="enlace" th:href="@{/contactos}"><li class="contacto">Contactos</li></a>
+                </ul>
+            <div class="redesFooter">
+                <a class="enlace" href="#"><ion-icon class="facebook" name="logo-facebook"></ion-icon></a>
+                <a class="enlace" href="#"><ion-icon class="instagram" name="logo-instagram"></ion-icon></a>
+                <a class="enlace" href="#"><ion-icon class="twitter" name="logo-twitter"></ion-icon></a>
+            </div>
+            <p class="texto">© 2024 Acardemy. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    
+    <!-- Scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

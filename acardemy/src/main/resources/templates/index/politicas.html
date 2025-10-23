@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta mane="autor" content="#">
+    <meta name="description" content="#">
+    <meta name="keywords" content="#">
+    <title>Acardemy - Politica de privacidad</title>
+|   <link rel="favicon" type="image/png" th:href="@{favicon/}">
+    <link rel="stylesheet" th:href="@{css/index/politicas.css}">
+</head>
+<body>
+    <!-- Pagina -->
+    <div class="pagina">
+        <!-- Cabecera de la pagina -->
+        <header class="cabecera">
+            <!-- Nombre de la pagina -->
+            <div class="aNombre">
+                <a class="enlace" th:href="@{/index}">
+                    <h1 class="nombre">Acardemy</h1>
+                </a>
+            </div>
+            <!-- Area de navegacion -->
+            <nav class="navegacion">
+                <!-- Opciones de navegacion -->
+                <ul class="opciones">
+                    <li class="inicio"><a class="enlace" th:href="@{/index}">Inicio</a></li>
+                    <li class="acerca"><a class="enlace" th:href="@{/acerca}">Acerca</a></li>
+                </ul>
+            </nav>
+            <!-- Boton de inicio de sesion -->
+            <div class="aBtn">
+                <a class="enlace" th:href="@{/ingreso}">
+                    <button class="ingreso">Iniciar Sesión</button>
+                </a>
+                <a class="enlace" th:href="@{/registro}">
+                    <button class="registro">Registrarse</button>
+                </a>
+            </div>
+        </header>
+        <!-- Contenido -->
+        <div class="contenido">
+            <main class="cuadro">
+                <ion-icon class="icono" name="document-lock-outline"></ion-icon>
+                <div class="titulo">
+                    <h2 class="nombre">Pólitica de Privacidad</h2>
+                    <p class="mensage">Última actualizació: 24 de Octubre de 2025</p>
+                </div>
+                <!-- Secciones de informacion -->
+                <div class="informacion">
+                    <section class="seccion">
+                        <h3 class="subtitulo">1 Introducción</h3>
+                        <article class="articulo">
+                            <p class="textoS">Bienvenido a Acardemy. Tu privacidad es de suma importancia para nosotros. Esta politica de privacidad explica cómo recopilamos, utilizamos, divulgamos y proyejemos tu informacion cuando utilizas nuestra aplicacion web Acardemy. Por favor, lee esta politica de privacidad cuidadosamente.</p>
+                        </article>
+                    </section>
+                    <section class="seccion">
+                        <h3 class="subtitulo">2 Información que Recopilamos</h3>
+                        <article class="articulo">
+                            <p class="textoS">Podemos recopilar información sobre ti de varias maneras. La informacion que podemos recopilar a taves de la Aplicacion incluye.</p>
+                        </article>
+                    </section>
+                    <section class="seccion">
+                        <h3 class="subtitulo">2.1 Datos Personales</h3>
+                        <article class="articulo">
+                            <p class="textoS">Información de identificación de personas, como tu nombre, dirección de correo electrónico y datos demograficos (como tu edad y pais), que nos proporcionan voluntariamente cuando te registras en la Aplicación.</p>
+                        </article>
+                    </section>
+                    <section class="seccion">
+                        <h3 class="subtitulo">2.2 Datos de uso</h3>
+                        <article class="articulo">
+                            <p class="textoS">Información que nuestro servidor recopila automaticamente cuando accedes a la Aplicación.</p>
+                        </article>
+                    </section>
+                </div>
+                <div class="boton">
+                    <a class="enlace" th:href="@{/index}">
+                        <button class="btn">Entendido</button>
+                    </a>
+                </div>
+            </main>
+        </div>
+        <div class="linea"></div>
+        <!-- Pie de pagina -->
+        <footer class="footer">
+            <ul class="opcionesFooter">
+                    <a class="enlace" th:href="@{/terminos}"><li class="terminos">Termínos de Servicio</li></a>
+                    <a class="enlace" th:href="@{/politicas}"><li class="politica">Politica de Privacidad</li></a>
+                    <a class="enlace" th:href="@{/contactos}"><li class="contacto">Contactos</li></a>
+                </ul>
+            <div class="redesFooter">
+                <a class="enlace" href="#"><ion-icon class="facebook" name="logo-facebook"></ion-icon></a>
+                <a class="enlace" href="#"><ion-icon class="instagram" name="logo-instagram"></ion-icon></a>
+                <a class="enlace" href="#"><ion-icon class="twitter" name="logo-twitter"></ion-icon></a>
+            </div>
+            <p class="texto">© 2024 Acardemy. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    
+    <!-- Scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

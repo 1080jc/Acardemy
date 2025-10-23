@@ -23,29 +23,29 @@
                     <div class="input">
                         <ion-icon class="icono_registro" name="person-circle-outline"></ion-icon>
                         <div class="label">
-                            <label class="peticion">Nombre</label>
+                            <label class="peticion" for="nombre">Nombre</label>
                             <input class="ingreso" type="text" th:field="*{nombre}" placeholder="Ingrese su nombre" required>
                         </div>
                     </div>
                     <div class="input">
                         <ion-icon class="icono_registro" name="person-circle-outline"></ion-icon>
                         <div class="label">
-                            <label class="peticion">Apellido</label>
+                            <label class="peticion" for="apellido">Apellido</label>
                             <input class="ingreso" type="text" th:field="*{apellido}" placeholder="Ingrese su apellido" required>
                         </div>
                     </div>
                     <div class="input">
                         <ion-icon class="icono_registro" name="mail-outline"></ion-icon>
                         <div class="label">
-                            <label class="peticion">Correo electrónico</label>
-                            <input class="ingreso" type="email" th:field="*{email}" placeholder="Ingrese su correo" required>
+                            <label class="peticion" for="email">Correo electrónico</label>
+                            <input class="ingreso" type="email" th:field="*{email}" placeholder="tu@email.com" required>
                         </div>
                     </div>
                     <div class="input">
                         <ion-icon class="icono_registro" name="key-outline"></ion-icon>
                         <div class="label">
-                            <label class="peticion">Contraseña</label>
-                            <input class="ingreso" type="password" th:field="*{password}" placeholder="Ingrese su contraseña" required>
+                            <label class="peticion" for="password">Contraseña</label>
+                            <input class="ingreso" type="password" th:field="*{password}" placeholder="***********" required>
                         </div>    
                     </div>
                     <button class="btn" type="submit">Registrarse</button>

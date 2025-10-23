@@ -24,51 +24,51 @@ public class UserController {
     private UserService userService;
 
     //Metodo para registrar usuario
-    @GetMapping("/register")
+    @GetMapping("/registro")
     public String mostrarFormularioRegistro(Model model) {
         model.addAttribute("user", new User());
-        return "register/registerUser";
+        return "registro/registroUser";
     }
 
-    @PostMapping("/register")
+    @PostMapping("/registro")
     public String registrarPropietario(@Valid @ModelAttribute User user, Model model) {
         if (userService.existePorCorreo(user.getEmail())) {
             model.addAttribute("error");
-            return "register/registerUser";
+            return "registro/registroUser";
         }
         userService.guardar(user);
         return "redirect:/?index/index=exito";
     }
 
     //Metodo para iniciar sesion
-    @GetMapping("/login")
+    @GetMapping("/ingreso")
     public String mostrarLogin(Model model) {
         model.addAttribute("user", new User());
-        return "login/loginUser";
+        return "ingreso/ingresoUser";
     }
-    /*
-    @PostMapping("/login")
+
+    @PostMapping("/ingreso")
     public String loginUser(@Valid @ModelAttribute User user, RedirectAttributes redirectAttributes) {
         User encontrado = userService.buscarPorCorreoYContraseña(user.getEmail(), user.getPassword());
         if (encontrado != null) {
             redirectAttributes.addFlashAttribute("user", encontrado);
-            return "redirect:/panelPrincipal";
+            return "redirect:/panelInicio";
         } else {
             redirectAttributes.addFlashAttribute("error");
-            return "redirect:/login";
+            return "redirect:/ingreso";
         }
     }
-    */
+
 
     //metodo para panel proncipal
-    @GetMapping("/panelPrincipal")
+    @GetMapping("/panelInicio")
     public String mostrarPanel(@ModelAttribute User user, Model model) {
         if (user == null){
-            return "redirect:/login";
+            return "redirect:/index";
         }
         else {
             model.addAttribute("user", user);
-            return "/panel/panelPrincipal";
+            return "/panel/panelInicio";
         }
 
     }

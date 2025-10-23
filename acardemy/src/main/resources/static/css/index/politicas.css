@@ -1,0 +1,360 @@
+/* "Roboto", sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* "Montserrat", sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Colores */
+:root {
+    /* Colores Fondo */
+    --background-primario: #F8F9FA;
+    --background-secundario: #F1F5F9;
+    /* Colores Texto */
+    --text-primario: #131313;
+    --text-secundario: #5e6164;
+    --text-terciario: #f3f5f8;
+    /* Colores Botones */
+    --btn-primario: #046ad6;
+    --btn-secundario: #E2E8F0;
+    /* Colores Etiquetas */
+    --label-primario: #FFBD00;
+    --label-secundario: #F9EEC9;
+    /* Colores Sombras & Lineas */
+    --shadow-primario: #d9e1eb;
+    /* Colores Pie de pagina */
+    --footer-primario: #F8F9FA;
+    /* Colores hover */
+    --hover-btn-primario: #3986d8;
+    --hover-btn-secundario: #b0bac7;
+}
+
+/* Pagina */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--background-secundario);
+}
+.pagina {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-secundario);
+}
+
+/* Cabecera */
+.cabecera {
+    background-color: var(--background-primario);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 10;
+    padding: 20px 40px;
+    box-shadow: 1px 2px var(--shadow-primario);
+}
+
+/* Logo de la pagina */
+.enlace {
+    text-decoration: none;
+}
+
+.nombre {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 27px;
+    color: var(--text-primario);
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Opciones de navegacion */
+.opciones {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.inicio a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--text-secundario);
+    cursor: pointer;
+}
+
+.acerca a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--text-secundario);
+    cursor: pointer;
+}
+
+/* Area de ingreso */
+.aBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+}
+
+.ingreso {
+    border: none;
+    background-color: var(--btn-primario);
+    color: var(--text-terciario);
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.registro {
+    border: none;
+    background-color: var(--btn-secundario);
+    color: var(--text-primario);
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Contenido de la pagina */
+.contenido {
+    margin: 17rem 15rem;
+}
+
+.cuadro {
+    margin-top: 20rem;
+    padding: 20px 20px;
+    background-color: var(--background-primario);
+    border-radius: 20px;
+    box-shadow: 1px 2px var(--shadow-primario);
+}
+
+.icono {
+    margin-left: 0;
+    margin-top: 0;
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 7px;
+    background-color: var(--btn-primario);
+    color: var(--text-terciario);
+    display: list-item;
+}
+
+.titulo {
+    display: grid;
+    margin-left: 50px;
+    margin-top: -40px;
+    border-bottom: solid var(--shadow-primario);
+}
+
+.nombre {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--text-primario);
+}
+
+.mensage {
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--hover-btn-primario);
+}
+
+.informacion {
+    display: grid;
+    grid-auto-rows: auto auto auto auto;
+    gap: 20px;
+    border-bottom: solid var(--shadow-primario);
+    padding-bottom: 10px;
+}
+
+.subtitulo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.textoS {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-secundario);
+    text-align: left;
+}
+
+.boton {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.enlace {
+    height: 40px;
+}
+
+.btn {
+    border: none;
+    background-color: var(--btn-primario);
+    color: var(--text-terciario);
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    width: 10rem;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.linea {
+    border-bottom: 2px solid var(--shadow-primario);
+}
+
+/* Pie de pagina */
+.footer {
+    left: 0;
+    right: 0;
+    min-height: 100px;
+    padding: 30px 30px;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    background-color: var(--footer-primario);
+}
+
+.opcionesFooter {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.terminos {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--text-secundario);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.politica {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--text-secundario);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.contacto {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--text-secundario);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.redesFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;           
+}
+
+.facebook {
+    font-size:  35px;
+    color: var(--text-secundario);
+}
+
+.instagram {
+    font-size:  35px;
+    color: var(--text-secundario);
+}
+
+.twitter {
+    font-size:  35px;
+    color: var(--text-secundario);
+}
+
+.texto {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: var(--text-secundario);
+    font-weight: 300;
+}
+
+/* Animaciones */
+.inicio:hover .enlace{
+    transition: 0.3s;
+    color: var(--hover-btn-primario);
+}
+
+.acerca:hover .enlace{
+    transition: 0.3s;
+    color: var(--hover-btn-primario);
+}
+
+.enlace:hover .ingreso{
+    transition: 0.3s;
+    background-color: var(--hover-btn-primario);
+}
+
+.enlace:hover .registro{
+    transition: 0.3s;
+    background-color: var(--hover-btn-secundario);
+}
+
+.enlace:hover .btn{
+    transition: 0.3s;
+    background-color: var(--hover-btn-primario);
+}
+
+.enlace:hover .terminos {
+    transition: 0.3s;
+    color: var(--hover-btn-primario);
+}
+
+.enlace:hover .politica {
+    transition: 0.3s;
+    color: var(--hover-btn-primario);
+}
+
+.enlace:hover .contacto {
+    transition: 0.3s;
+    color: var(--hover-btn-primario);
+}
+
+.enlace:hover .facebook {
+    transition: 0.3s;
+    color: var(--hover-btn-primario);
+}
+
+.enlace:hover .instagram {
+    transition: 0.3s;
+    color: var(--hover-btn-primario);
+}
+
+.enlace:hover .twitter {
+    transition: 0.3s;
+    color: var(--hover-btn-primario);
+}

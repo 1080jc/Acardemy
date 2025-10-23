@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta mane="autor" content="#">
+    <meta name="description" content="#">
+    <meta name="keywords" content="#">
+    <title>Acardemy - Acerca</title>
+|   <link rel="favicon" type="image/png" th:href="@{favicon/}">
+    <link rel="stylesheet" th:href="@{css/index/acerca.css}">
+</head>
+<body>
+    <!-- Pagina -->
+    <div class="aPagina">
+        <!-- Cabecera de la pagina -->
+        <header class="cabecera">
+            <!-- Nombre de la pagina -->
+            <div class="aNombre">
+                <a class="enlace" th:href="@{/index}">
+                    <h1 class="nombre">Acardemy</h1>
+                </a>
+            </div>
+            <!-- Area de navegacion -->
+            <nav class="navegacion">
+                <!-- Opciones de navegacion -->
+                <ul class="opciones">
+                    <li class="inicio"><a class="enlace" th:href="@{/index}">Inicio</a></li>
+                    <li class="acerca"><a class="enlace" th:href="@{/acerca}">Acerca</a></li>
+                </ul>
+            </nav>
+            <!-- Boton de inicio de sesion -->
+            <div class="aBtn">
+                <a class="enlace" th:th:href="@{/ingreso}">
+                    <button class="ingreso">Iniciar Sesión</button>
+                </a>
+                <a class="enlace" th:href="@{/registro}">
+                    <button class="registro">Registrarse</button>
+                </a>
+            </div>
+        </header>
+        <!-- Contenido -->
+        <div>
+        
+        </div>    
+        <!-- Pie de pagina -->
+        <footer class="footer">
+            <ul class="opcionesFooter">
+                    <a class="enlace" th:href="@{/terminos}"><li class="terminos">Termínos de Servicio</li></a>
+                    <a class="enlace" th:href="@{/politicas}"><li class="politica">Politica de Privacidad</li></a>
+                    <a class="enlace" th:href="@{/contactos}"><li class="contacto">Contactos</li></a>
+                </ul>
+            <div class="redesFooter">
+                <a class="enlace" href="#"><ion-icon class="facebook" name="logo-facebook"></ion-icon></a>
+                <a class="enlace" href="#"><ion-icon class="instagram" name="logo-instagram"></ion-icon></a>
+                <a class="enlace" href="#"><ion-icon class="twitter" name="logo-twitter"></ion-icon></a>
+            </div>
+            <p class="texto">© 2024 Acardemy. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    
+    <!-- Scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

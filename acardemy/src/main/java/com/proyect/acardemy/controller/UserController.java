@@ -46,7 +46,7 @@ public class UserController {
         model.addAttribute("user", new User());
         return "login/loginUser";
     }
-
+    /*
     @PostMapping("/login")
     public String loginUser(@Valid @ModelAttribute User user, RedirectAttributes redirectAttributes) {
         User encontrado = userService.buscarPorCorreoYContraseña(user.getEmail(), user.getPassword());
@@ -58,7 +58,7 @@ public class UserController {
             return "redirect:/login";
         }
     }
-
+    */
 
     //metodo para panel proncipal
     @GetMapping("/panelPrincipal")
